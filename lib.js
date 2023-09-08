@@ -46,6 +46,10 @@ class Popup {
     }
     show() {
         this.popupElement.style.display = 'block';
+        if (this.params.animation === 'left') {
+            this.popupContent.classList.add('libPopup-animation');
+        }
+
     }
 }
 

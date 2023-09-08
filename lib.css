@@ -20,3 +20,16 @@
   max-width: 60%;
   padding: 10px;
 }
+
+.libPopup-animation {
+  animation: animation-popup 0.1s ease-in;
+}
+
+@keyframes animation-popup {
+  from {
+    transform: translateX(20%) translate(-50%, -50%);
+  }
+  to {
+    transform: translateX(0) translate(-50%, -50%);
+  }
+}
