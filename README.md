@@ -19,28 +19,24 @@
 
  To get started with our library, simply include the following CDN link in your project's HTML file:
 
- ```html
- <link rel="stylesheet" href="https://example.com/library/style.css">
- ```
+
 
  Alternatively, you can download the library files from our [GitHub repository](https://github.com/yourusername/your-repo) and include them in your project manually.
 
 # Usage
 
  ```javascript
- // Import the library
- import TextStyler from 'text-styler-library';
-
  // Initialize the text styler
-const styler = new TextStyler();
+const myPopup = new Popup('.p', {});
 
- // Apply styles to your text
- styler.setStyle(element, {
-   fontSize: '16px',
-   color: '#333',
-   fontWeight: 'bold',
-   // Add more styles as needed
- });
+ //in {} send parameters
+
+//Popup
+
+{
+close:'.your_class'
+}
+
  ```
 
  For more detailed usage instructions and examples, please refer to our [documentation](https://github.com/yourusername/your-repo/docs).
