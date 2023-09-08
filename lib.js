@@ -10,7 +10,13 @@ class Popup {
             this.createPopupContent();
             this.addCloseEventListener();
             this.addOutsideClickListener();
+            // 
+            if (this.params.active === true) {
+                this.show()
+            }
         }
+
+
     }
 
     createPopupContent() {
@@ -30,15 +36,18 @@ class Popup {
                 this.closePopup();
             });
         }
+
+
     }
 
 
     addOutsideClickListener() {
-        document.addEventListener('click', (event) => {
-            if (event.target === this.popupElement) {
-                this.closePopup();
-            }
-        })
+        if (!this.params.clickOnclose)
+            document.addEventListener('click', (event) => {
+                if (event.target === this.popupElement) {
+                    this.closePopup();
+                }
+            })
     }
 
     closePopup() {
@@ -46,12 +55,12 @@ class Popup {
     }
     show() {
         this.popupElement.style.display = 'block';
+        // animations
         if (this.params.animation === 'left') {
             this.popupContent.classList.add('libPopup-animation');
         }
 
     }
 }
-
 
 
